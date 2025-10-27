@@ -1,14 +1,12 @@
 {
-  key: 1001,
-  name: '开屏广告',
-  snapshotUrls: [
-    'https//i.gkd.li/snapshot/1756545991246'
-  ],
-  rules: [
-    {
-      matches: [
-        'TextView[id="com.babycloud.hanju:id/dm_ads_splash_skip"]'
-      ]
-    }
-  ]
+  id: 1107,
+  name: '规则订阅',
+  version: 0.001,
+  author: 'BigXBei',
+  updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
+  checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
+  supportUri: 'https://gkd.li/',
+  globalGroups: [],
+  categories: [],
+  apps: [],
 }
