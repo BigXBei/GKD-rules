@@ -1,1 +1,14 @@
-test
+{
+  key: 1001,
+  name: '开屏广告',
+  snapshotUrls: [
+    'https//i.gkd.li/snapshot/1756545991246'
+  ],
+  rules: [
+    {
+      matches: [
+        'TextView[id="com.babycloud.hanju:id/dm_ads_splash_skip"]'
+      ]
+    }
+  ]
+}
