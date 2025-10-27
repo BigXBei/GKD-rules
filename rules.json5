@@ -6,7 +6,22 @@
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   supportUri: 'https://gkd.li/',
-  globalGroups: [],
+  globalGroups: [
+    {
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+        },
+      ],
+    }
+  ],
   categories: [],
   apps: [],
 }
