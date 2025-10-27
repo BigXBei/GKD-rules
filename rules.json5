@@ -1,12 +1,12 @@
 {
   id: 1107,
   name: 'Subscription',
-  version: 1,
+  version: 0,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   supportUri: 'https://gkd.li/',
-  globalGroups: [],
   categories: [],
+  globalGroups: [],
   apps: [],
 }
