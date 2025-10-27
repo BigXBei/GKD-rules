@@ -1,6 +1,6 @@
 {
   id: 1107,
-  name: '规则订阅',
+  name: 'Subscription',
   version: 0.001,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
