@@ -6,7 +6,7 @@
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   supportUri: 'https://gkd.li/',
-  categories: [],
   globalGroups: [],
+  categories: [],
   apps: [],
 }
