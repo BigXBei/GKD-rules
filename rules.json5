@@ -1,7 +1,7 @@
 {
   id: 1107,
-  name: 'Subscription',
-  version: 0,
+  name: 'Github.com/BigXBei/GKD-rules',
+  version: 1,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -31,8 +31,7 @@
         {
           key: 100101,
           fastQuery: true,
-          actionCd: 500,
-          actionMaximum: 2,
+          actionMaximum: 1,
           name: '通知权限请求',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761547628441',
