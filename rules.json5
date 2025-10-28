@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 1,
+  version: 2,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -35,6 +35,76 @@
           name: '通知权限请求',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761547628441',
+        },
+      ],
+    },
+    {
+      id: 'com.tencent.qt.qtl',
+      name: '掌上英雄联盟',
+      groups: [
+        {
+          key: 100201,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '首页活动图片',
+          rules: 'ImageView[id="com.tencent.qt.qtl:id/notice_close_pic"][vid="notice_close_pic"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761561154703',
+        },
+      ],
+    },
+    {
+      id: 'com.eg.android.AlipayGphone',
+      name: '支付宝',
+      groups: [
+        {
+          key: 100301,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'Button[id="com.alipay.mobile.rome.pushservice:id/dialog_cancel_btn"][text="暂时不用"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761616429731',
+        },
+      ],
+    },
+    {
+      id: 'tv.danmaku.bili.MainActivityV2',
+      name: '哔哩哔哩',
+      groups: [
+        {
+          key: 100401,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'TextView[id="com.bilibili.app.in:id/close"][vid="close"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761616461661',
+        },
+      ],
+    },
+    {
+      id: 'com.xunmeng.pinduoduo',
+      name: '拼多多',
+      groups: [
+        {
+          key: 100501,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'TextView[text="拒绝接收"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761621534648',
+        },
+      ],
+    },
+    {
+      id: 'com.cainiao.wireless',
+      name: '菜鸟',
+      groups: [
+        {
+          key: 100601,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '好友添加建议',
+          rules: 'TextView[id="com.cainiao.wireless:id/cn_bottom_sheet_bottom_button"][vid="cn_bottom_sheet_bottom_button"][text="下次再说"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761621631611',
         },
       ],
     },
