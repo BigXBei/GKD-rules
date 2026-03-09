@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 3,
+  version: 4,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -11,7 +11,7 @@
       key: 0,
       name: '开屏广告',
       fastQuery: true,
-      matchTime: 10000,
+      matchTime: 5000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
@@ -32,6 +32,7 @@
           key: 100101,
           fastQuery: true,
           actionMaximum: 1,
+          matchTime: 5000
           name: '通知权限请求',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761547628441',
@@ -60,9 +61,17 @@
           key: 100301,
           fastQuery: true,
           actionMaximum: 1,
-          name: '通知权限请求',
+          name: '通知权限请求（上方弹窗）',
           rules: 'Button[id="com.alipay.mobile.rome.pushservice:id/dialog_cancel_btn"][text="暂时不用"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761616429731',
+        },
+        {
+          key: 100302,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求（下方横幅）',
+          rules: 'TextView[text=""]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761616418050',
         },
       ],
     },
@@ -105,6 +114,99 @@
           name: '好友添加建议',
           rules: 'TextView[id="com.cainiao.wireless:id/cn_bottom_sheet_bottom_button"][vid="cn_bottom_sheet_bottom_button"][text="下次再说"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761621631611',
+        },
+        {
+          key: 100602,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'FrameLayout[id="com.cainiao.wireless:id/close_layout"][vid="close_layout"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1762082432069',
+        },
+      ],
+    },
+    {
+      id: 'com.rocket.e3683eca3113cc8',
+      name: '我们所向往的',
+      groups: [
+        {
+          key: 100701,
+          fastQuery: true,
+          actionMaximum: 1,
+          matchTime: 5000
+          name: '软件使用提示',
+          rules: 'Button[id="android:id/button1"][text="确认"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761830546831',
+        },
+      ],
+    },
+    {
+      id: 'me.ele',
+      name: '淘宝闪购',
+      groups: [
+        {
+          key: 100801,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'ImageView[id="me.ele:id/close_tips"][vid="close_tips"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1771844976394',
+        },
+      ],
+    },
+    {
+      id: 'com.tencent.qqmusic',
+      name: 'QQ音乐',
+      groups: [
+        {
+          key: 100901,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '购买会员建议',
+          rules: 'ImageView[id="com.tencent.qqmusic:id/ifj"][vid="ifj"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1771897578272',
+        },
+      ],
+    },
+    {
+      id: 'com.baidu.BaiduMap',
+      name: '百度地图',
+      groups: [
+        {
+          key: 101001,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'TextView[id="com.baidu.BaiduMap:id/tv_dialog_cancel"][vid="tv_dialog_cancel"][text="取消"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1771939088083',
+        },
+      ],
+    },
+    {
+      id: 'com.autonavi.minimap',
+      name: '高德地图',
+      groups: [
+        {
+          key: 101101,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'TextView[id="com.autonavi.minimap:id/scene_permission_cancel"][vid="scene_permission_cancel"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1771939165367',
+        },
+      ],
+    },
+    {
+      id: 'com.taobao.idlefish',
+      name: '闲鱼',
+      groups: [
+        {
+          key: 101201,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '隐私权限建议',
+          rules: 'ImageView[id="com.taobao.idlefish:id/bar_close"][vid="bar_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1771941966887',
         },
       ],
     },
