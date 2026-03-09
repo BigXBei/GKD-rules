@@ -32,7 +32,7 @@
           key: 100101,
           fastQuery: true,
           actionMaximum: 1,
-          matchTime: 5000
+          matchTime: 5000,
           name: '通知权限请求',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761547628441',
@@ -133,7 +133,7 @@
           key: 100701,
           fastQuery: true,
           actionMaximum: 1,
-          matchTime: 5000
+          matchTime: 5000,
           name: '软件使用提示',
           rules: 'Button[id="android:id/button1"][text="确认"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761830546831',
