@@ -77,7 +77,7 @@
     },
     {
       id: 'com.bilibili.app.in',
-      name: '哔哩哔哩',
+      name: '哔哩哔哩（全球）',
       groups: [
         {
           key: 100401,
@@ -235,6 +235,20 @@
           name: '首页活动图片',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1773043153069',
+        },
+      ],
+    },
+    {
+      id: 'tv.danmaku.bili',
+      name: '哔哩哔哩（中国）',
+      groups: [
+        {
+          key: 101501,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'TextView[id="com.bilibili.app.in:id/close"][vid="close"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1761616461661',
         },
       ],
     },
