@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 4,
+  version: 5,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -207,6 +207,34 @@
           name: '隐私权限建议',
           rules: 'ImageView[id="com.taobao.idlefish:id/bar_close"][vid="bar_close"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1771941966887',
+        },
+      ],
+    },
+    {
+      id: 'com.heytap.themestore',
+      name: 'OPPO主题商店',
+      groups: [
+        {
+          key: 101301,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '首页活动图片',
+          rules: 'ImageView[id="com.heytap.themestore:id/lq"][vid="lq"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1772557214066',
+        },
+      ],
+    },
+    {
+      id: 'com.coloros.sceneservice',
+      name: '智慧数据增强服务',
+      groups: [
+        {
+          key: 101401,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '首页活动图片',
+          rules: 'Button[id="android:id/button2"][text="取消"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773043153069',
         },
       ],
     },
