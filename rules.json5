@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 5,
+  version: 6,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
