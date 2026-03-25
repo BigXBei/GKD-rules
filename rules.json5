@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 6,
+  version: 7,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -9,7 +9,7 @@
   globalGroups: [
     {
       key: 0,
-      name: '全局规则',
+      name: 'text*="跳过"',
       fastQuery: true,
       matchTime: 5000,
       actionMaximum: 1,
@@ -20,6 +20,16 @@
           name: 'text*="跳过"',
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
         },
+      ],
+    }
+    {
+      key: 1,
+      name: 'desc*="关闭"',
+      fastQuery: true,
+      matchTime: 5000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
         {
           key: 1,
           name: 'desc*="关闭"',
@@ -489,7 +499,7 @@
           fastQuery: true,
           actionMaximum: 1,
           name: '剪切板权限请求',
-          rules: 'ImageView[id="com.greenpoint.android.mc10086.activity:id/dialog_btn1"][vid="dialog_btn1"][text="不允许"]',
+          rules: 'Button[id="com.greenpoint.android.mc10086.activity:id/dialog_btn1"][vid="dialog_btn1"][text="不允许"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1773245995750',
         },
       ],
