@@ -9,7 +9,7 @@
   globalGroups: [
     {
       key: 0,
-      name: '开屏广告',
+      name: '全局规则',
       fastQuery: true,
       matchTime: 5000,
       actionMaximum: 1,
@@ -17,7 +17,13 @@
       rules: [
         {
           key: 0,
+          name: 'text*="跳过"',
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+        },
+        {
+          key: 1,
+          name: 'desc*="关闭"',
+          matches: '[desc*="关闭"][desc.length<10][visibleToUser=true]',
         },
       ],
     }
@@ -26,7 +32,7 @@
   apps: [
     {
       id: 'com.netease.buff',
-      name: '网易BUFF',
+      name: '网易BUFF（com.netease.buff）',
       groups: [
         {
           key: 100101,
@@ -41,13 +47,13 @@
     },
     {
       id: 'com.tencent.qt.qtl',
-      name: '掌上英雄联盟',
+      name: '掌上英雄联盟（com.tencent.qt.qtl）',
       groups: [
         {
           key: 100201,
           fastQuery: true,
           actionMaximum: 1,
-          name: '首页活动图片',
+          name: '首页弹窗广告',
           rules: 'ImageView[id="com.tencent.qt.qtl:id/notice_close_pic"][vid="notice_close_pic"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761561154703',
         },
@@ -55,7 +61,7 @@
     },
     {
       id: 'com.eg.android.AlipayGphone',
-      name: '支付宝',
+      name: '支付宝（com.eg.android.AlipayGphone）',
       groups: [
         {
           key: 100301,
@@ -77,7 +83,7 @@
     },
     {
       id: 'com.bilibili.app.in',
-      name: '哔哩哔哩（全球）',
+      name: '哔哩哔哩（谷歌）（com.bilibili.app.in）',
       groups: [
         {
           key: 100401,
@@ -87,11 +93,19 @@
           rules: 'TextView[id="com.bilibili.app.in:id/close"][vid="close"][text="暂不开启"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761616461661',
         },
+        {
+          key: 100402,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '评价请求',
+          rules: 'TextView[id="com.bilibili.app.in:id/cancel"][vid="cancel"][text="下次再说"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773244018710',
+        },
       ],
     },
     {
       id: 'com.xunmeng.pinduoduo',
-      name: '拼多多',
+      name: '拼多多（com.xunmeng.pinduoduo）',
       groups: [
         {
           key: 100501,
@@ -105,7 +119,7 @@
     },
     {
       id: 'com.cainiao.wireless',
-      name: '菜鸟',
+      name: '菜鸟（com.cainiao.wireless）',
       groups: [
         {
           key: 100601,
@@ -127,7 +141,7 @@
     },
     {
       id: 'com.rocket.e3683eca3113cc8',
-      name: '我们所向往的',
+      name: '我们所向往的（com.rocket.e3683eca3113cc8）',
       groups: [
         {
           key: 100701,
@@ -142,7 +156,7 @@
     },
     {
       id: 'me.ele',
-      name: '淘宝闪购',
+      name: '淘宝闪购（me.ele）',
       groups: [
         {
           key: 100801,
@@ -156,7 +170,7 @@
     },
     {
       id: 'com.tencent.qqmusic',
-      name: 'QQ音乐',
+      name: 'QQ音乐（com.tencent.qqmusic）',
       groups: [
         {
           key: 100901,
@@ -166,11 +180,19 @@
           rules: 'ImageView[id="com.tencent.qqmusic:id/ifj"][vid="ifj"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1771897578272',
         },
+        {
+          key: 100902,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '评价请求',
+          rules: 'ImageView[id="com.tencent.qqmusic:id/close_btn"][vid="close_btn"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773357484569',
+        },
       ],
     },
     {
       id: 'com.baidu.BaiduMap',
-      name: '百度地图',
+      name: '百度地图（com.baidu.BaiduMap）',
       groups: [
         {
           key: 101001,
@@ -184,7 +206,7 @@
     },
     {
       id: 'com.autonavi.minimap',
-      name: '高德地图',
+      name: '高德地图（com.autonavi.minimap）',
       groups: [
         {
           key: 101101,
@@ -198,7 +220,7 @@
     },
     {
       id: 'com.taobao.idlefish',
-      name: '闲鱼',
+      name: '闲鱼（com.taobao.idlefish）',
       groups: [
         {
           key: 101201,
@@ -212,13 +234,13 @@
     },
     {
       id: 'com.heytap.themestore',
-      name: 'OPPO主题商店',
+      name: 'OPPO主题商店（com.heytap.themestore）',
       groups: [
         {
           key: 101301,
           fastQuery: true,
           actionMaximum: 1,
-          name: '首页活动图片',
+          name: '首页弹窗广告',
           rules: 'ImageView[id="com.heytap.themestore:id/lq"][vid="lq"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1772557214066',
         },
@@ -226,13 +248,13 @@
     },
     {
       id: 'com.coloros.sceneservice',
-      name: '智慧数据增强服务',
+      name: '智慧数据增强服务（com.coloros.sceneservice）',
       groups: [
         {
           key: 101401,
           fastQuery: true,
           actionMaximum: 1,
-          name: '首页活动图片',
+          name: '首页弹窗广告',
           rules: 'Button[id="android:id/button2"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1773043153069',
         },
@@ -240,7 +262,7 @@
     },
     {
       id: 'tv.danmaku.bili',
-      name: '哔哩哔哩（中国）',
+      name: '哔哩哔哩（中国）（tv.danmaku.bili）',
       groups: [
         {
           key: 101501,
@@ -249,6 +271,226 @@
           name: '通知权限请求',
           rules: 'TextView[id="com.bilibili.app.in:id/close"][vid="close"][text="暂不开启"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1761616461661',
+        },
+      ],
+    },
+    {
+      id: 'com.alibaba.wireless',
+      name: '阿里巴巴（com.alibaba.wireless）',
+      groups: [
+        {
+          key: 101601,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求',
+          rules: 'ImageView[id="com.alibaba.wireless:id/view_msg_exception_close"][vid="view_msg_exception_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773103175572',
+        },
+        {
+          key: 101602,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '日历权限请求',
+          rules: 'TextView[id="com.alibaba.wireless:id/wave_resend_cancel"][vid="wave_resend_cancel"][text="暂时不用"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773966403363',
+        },
+        {
+          key: 101603,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '存储权限请求',
+          rules: 'TextView[id="com.alibaba.wireless:id/negtive_btn"][vid="negtive_btn"][text="再想想"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773806295781',
+        },
+      ],
+    },
+    {
+      id: 'com.baidu.netdisk',
+      name: '百度网盘（com.baidu.netdisk）',
+      groups: [
+        {
+          key: 101701,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '评价请求',
+          rules: 'TextView[id="com.baidu.netdisk:id/tv_left_btn"][vid="tv_left_btn"][text="以后再说"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774157293894',
+        },
+        {
+          key: 101702,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '更换图标请求',
+          rules: 'TextView[id="com.baidu.netdisk:id/use_lately"][vid="use_lately"][text="暂不使用"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773510441826',
+        },
+        {
+          key: 101703,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求（下载完成）',
+          rules: 'ImageView[id="com.baidu.netdisk:id/dialog_cancel"][vid="dialog_cancel"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774157314415',
+        },
+        {
+          key: 101704,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '通知权限请求（资源更新）',
+          rules: 'Button[id="com.baidu.netdisk:id/dialog_button_cancel"][vid="dialog_button_cancel"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773510434987',
+        },
+        {
+          key: 101705,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '照片备份请求',
+          rules: 'Button[id="com.baidu.netdisk:id/dialog_button_cancel"][vid="dialog_button_cancel"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773510414793',
+        },
+        {
+          key: 101706,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '安全备份请求',
+          rules: 'TextView[id="com.baidu.netdisk:id/not_open"][vid="not_open"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773510405952',
+        },
+      ],
+    },
+    {
+      id: 'com.ss.android.ugc.aweme',
+      name: '抖音（com.ss.android.ugc.aweme）',
+      groups: [
+        {
+          key: 101801,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'TextView[id="com.ss.android.ugc.aweme:id/3v+"][vid="3v+"][text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773911273565',
+        },
+      ],
+    },
+    {
+      id: 'com.netease.mobimail',
+      name: '网易邮箱（com.netease.mobimail）',
+      groups: [
+        {
+          key: 101901,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: 'AI助手建议',
+          rules: 'ImageView[id="com.netease.mobimail:id/iv_close"][vid="iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773119001115',
+        },
+      ],
+    },
+    {
+      id: 'com.jingdong.app.mall',
+      name: '京东（com.jingdong.app.mall）',
+      groups: [
+        {
+          key: 102001,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'ImageView[id="com.jingdong.app.mall:id/bottomCloseDialog"][vid="bottomCloseDialog"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773739686902',
+        },
+      ],
+    },
+    {
+      id: 'com.yek.android.kfc.activitys',
+      name: '肯德基（com.yek.android.kfc.activitys）',
+      groups: [
+        {
+          key: 102101,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '首页弹窗广告',
+          rules: 'ImageView[id="com.yek.android.kfc.activitys:id/common_iv_close"][vid="common_iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773298871970',
+        },
+      ],
+    },
+    {
+      id: 'com.sankuai.meituan',
+      name: '美团（com.sankuai.meituan）',
+      groups: [
+        {
+          key: 102201,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '定位权限请求',
+          rules: 'ImageView[id="com.sankuai.meituan:id/locate_guide_bottom_layer_close_btn"][vid="locate_guide_bottom_layer_close_btn"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774072517897',
+        },
+      ],
+    },
+    {
+      id: 'com.oray.sunlogin',
+      name: '向日葵远程控制（com.oray.sunlogin）',
+      groups: [
+        {
+          key: 102301,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '远控结束广告',
+          rules: 'ImageView[id="com.oray.sunlogin:id/ms_img_close"][vid="ms_img_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774245992175',
+        },
+        {
+          key: 102302,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '开屏广告',
+          rules: 'View[id="com.oray.sunlogin:id/ms_skipView"][vid="ms_skipView"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774245820850',
+        },
+      ],
+    },
+    {
+      id: 'com.max.xiaoheihe',
+      name: '小黑盒（com.max.xiaoheihe）',
+      groups: [
+        {
+          key: 102401,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '底部广告弹窗',
+          rules: 'ImageView[id="com.max.xiaoheihe:id/iv_close"][vvid="iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774149867910',
+        },
+      ],
+    },
+    {
+      id: 'com.greenpoint.android.mc10086.activity',
+      name: '中国移动（com.greenpoint.android.mc10086.activity）',
+      groups: [
+        {
+          key: 102501,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: 'AI助手建议',
+          rules: 'ImageView[id="com.greenpoint.android.mc10086.activity:id/ai_floatingBar_close"][vid="ai_floatingBar_close"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773246012553',
+        },
+        {
+          key: 102502,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '首页弹窗广告',
+          rules: 'ImageView[id="com.greenpoint.android.mc10086.activity:id/iv_close_top"][vid="iv_close_top"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773246060139',
+        },
+        {
+          key: 102503,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '剪切板权限请求',
+          rules: 'ImageView[id="com.greenpoint.android.mc10086.activity:id/dialog_btn1"][vid="dialog_btn1"][text="不允许"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1773245995750',
         },
       ],
     },
