@@ -1,7 +1,7 @@
 {
   id: 1107,
   name: 'Github.com/BigXBei/GKD-rules',
-  version: 7,
+  version: 8,
   author: 'BigXBei',
   updateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
   checkUpdateUrl: 'https://raw.githubusercontent.com/BigXBei/GKD-rules/refs/heads/main/rules.json5',
@@ -17,7 +17,6 @@
       rules: [
         {
           key: 0,
-          name: 'text*="跳过"',
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
         },
       ],
@@ -32,7 +31,6 @@
       rules: [
         {
           key: 1,
-          name: 'desc*="关闭"',
           matches: '[desc*="关闭"][desc.length<10][visibleToUser=true]',
         },
       ],
@@ -501,6 +499,14 @@
           name: '剪切板权限请求',
           rules: 'Button[id="com.greenpoint.android.mc10086.activity:id/dialog_btn1"][vid="dialog_btn1"][text="不允许"]',
           snapshotUrls: 'https://i.gkd.li/snapshot/1773245995750',
+        },
+        {
+          key: 102504,
+          fastQuery: true,
+          actionMaximum: 1,
+          name: '悬浮广告',
+          rules: 'ImageView[id="com.greenpoint.android.mc10086.activity:id/close_btn_bottom"][vid="close_btn_bottom"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1774420142660',
         },
       ],
     },
